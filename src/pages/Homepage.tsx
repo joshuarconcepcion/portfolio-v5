@@ -1,8 +1,6 @@
 import { type JSX } from 'react';
 import { HomeHero, HomeNav, HomeAbout } from '../sections/home';
 
-type Panel = 'Projects' | ''
-
 export default function Homepage(): JSX.Element {
     return (
         <div className='flex flex-col md:flex-row'>
