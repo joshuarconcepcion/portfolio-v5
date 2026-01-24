@@ -1,5 +1,6 @@
 import { type JSX } from 'react';
 import { HomeHero, HomeNav, HomeAbout } from '../sections/home';
+import { Outlet } from 'react-router';
 
 export default function Homepage(): JSX.Element {
     return (
@@ -12,7 +13,9 @@ export default function Homepage(): JSX.Element {
                 <HomeAbout />
             </div>
 
-            <div className='flex flex-col bg-main-dark h-dvh md:w-1/2'></div>
+            <div className='flex flex-col bg-main-dark h-dvh md:w-1/2'>
+                <Outlet />
+            </div>
 
         </div>
     )
