@@ -1,8 +1,7 @@
-import { type JSX } from 'react';
 import { HomeHero, HomeNav, HomeAbout } from '../sections/home';
-import { Outlet } from 'react-router';
+import { Outlet } from 'react-router-dom';
 
-export default function Homepage(): JSX.Element {
+export default function Homepage() {
     return (
         <div className='flex flex-col md:flex-row'>
             <div className='flex flex-col justify-between bg-main-light min-h-dvh md:w-1/2 md:px-16'>

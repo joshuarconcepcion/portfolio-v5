@@ -1,7 +1,6 @@
-import { type JSX } from 'react';
-import { Link } from 'react-router'
+import { Link } from 'react-router-dom'
 
-export default function HomeHero(): JSX.Element {
+export default function HomeHero() {
     return (
         <div className='flex justify-start items-start md:gap-20 gap-16 pt-12 pl-12 md:pl-6'>
             <h1 className='font-poppins text-[25px] md:text-[40px] whitespace-nowrap'><Link to = '/'>/*</Link></h1>

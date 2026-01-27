@@ -1,6 +1,4 @@
-import { type JSX } from "react";
-
-export default function HomeAbout(): JSX.Element {
+export default function HomeAbout() {
     return (
         <div className='w-full flex justify-start items-start md:gap-20 gap-10 pl-16 md:pl-6 pr-2'>
             <h1 className='font-ltsoul text-[18px] md:text-[20px]'>about</h1>

@@ -1,15 +1,16 @@
-import { type JSX } from 'react'
-import { Route, Routes } from 'react-router'
+import { Route, Routes } from 'react-router-dom'
 import './index.css'
 import Homepage from './pages/Homepage'
 import { RenderProjects } from './sections/projects'
+import { RenderLab } from './sections/lab'
 
-export default function App(): JSX.Element {
+export default function App() {
 
   return (
     <Routes>
       <Route path = '/' element={<Homepage />}>
         <Route index element={<RenderProjects />} />
+        <Route path = '/lab' element={<RenderLab />} />
       </Route>
     </Routes>
   )
