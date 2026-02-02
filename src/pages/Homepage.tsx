@@ -1,7 +1,22 @@
+import { useEffect, useRef } from 'react';
 import { HomeHero, HomeNav, HomeAbout } from '../sections/home';
-import { Outlet } from 'react-router-dom';
+import { Outlet, useLocation, useNavigationType } from 'react-router-dom';
 
 export default function Homepage() {
+    let outletRef = useRef<HTMLDivElement | null>(null);
+    let location = useLocation();
+    let navType = useNavigationType();
+
+    useEffect(() => {
+        if (window.innerWidth >= 768) return;
+        if (navType === "POP") return;
+
+        outletRef.current?.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+        })
+    }, [location.pathname, navType])
+
     return (
         <div className='flex flex-col md:flex-row'>
             <div className='flex flex-col justify-between bg-main-light min-h-dvh md:w-1/2 md:px-16'>
@@ -12,7 +27,7 @@ export default function Homepage() {
                 <HomeAbout />
             </div>
 
-            <div className='flex flex-col bg-main-dark h-dvh md:w-1/2'>
+            <div ref = {outletRef} className='flex flex-col bg-main-dark min-h-dvh md:w-1/2'>
                 <Outlet />
             </div>
 

@@ -14,11 +14,17 @@ export default function HomeNav(): JSX.Element {
         <div>1.2</div>
         <div>1.3</div>
         <div>1.4</div>
+        <div>1.5</div>
       </h1>
 
       <h1 className='font-ltsoul text-[26px] md:text-[20px]'>
         <div>
             <NavLink to='/' end className={linkClass}>
+                home
+            </NavLink>
+        </div>
+        <div>
+            <NavLink to='/projects' end className={linkClass}>
                 projects
             </NavLink>
         </div>
