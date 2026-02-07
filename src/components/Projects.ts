@@ -1,6 +1,6 @@
 import placeholder from '../assets/placeholder.jpg'
 
-type Project = {
+export type Project = {
     id: string
     slug: string
     description: string
